@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--	Author: Alexander Martin/Cameron Perkins
+			Date: 7/29/2020
+			File: add_film.html
+			Purpose: text boxes to inlcude new info about a new film
+-->
+
+<html>
+
+<head> </head>
+
+<title>Films</title>
+
+<body>
+
+<br><br>
+
+<center>
+
+<form name ="viewfilm" action = "./add_film.php" method ="post">
+
+<h3>Enter the following Film information </h3>
+
+Title : <input type ="varchar(255)" name ="title" value =""> <br><br>
+
+Description : <input type ="text" name ="description" value ="">
+
+Release Year: <input type ="year(4)" name ="release_year" value ="">
+
+Language ID: <input type ="integer" name ="language_id" value ="">
+
+Rental Duration: <input type ="integer" name ="rental_duration" value ="">
+
+Rental Rate: <input type ="decimal(4,2)" name ="rental_rate" value ="">
+
+Length: <input type ="integer" name ="length" value ="">
+
+Replacement Cost: <input type ="decimal(5,2)" name ="replacement_cost" value ="">
+
+Rating: <label for="rating">Choose a rating:</label>
+
+		<select name="rating" id="rating">
+			<option value="G">G</option>
+			<option value="PG">PG</option>
+			<option value="PG-13">PG-13</option>
+			<option value="R">R</option>
+			<option value="NC-17">NC-17</option>
+		</select>
+		
+Special Feature: <label for="special_features">Choose a feature:</label>
+
+		<select name="special_features" id="special_features">
+			<option value="trailers">Trailers</option>
+			<option value="commentaries">Commentaries</option>
+			<option value="deleted scenes">Deleted Scenes</option>
+			<option value="behind the scenes">Behind the Scenes</option>
+		</select>
+
+<br><br><br>
+
+<input type = "submit" name="Save" action = "./add_film.php">
+
+<input type= "button" name ="Cancel" value ="Cancel" onClick="window.open('./manager.html')">
+
+</form>
+
+</center>
+
+</body>
+
+</html>
